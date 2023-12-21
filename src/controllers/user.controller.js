@@ -69,7 +69,8 @@ const update = async (req, res) => {
     background
   )
 
-  res.send({message : 'User successfully updated!'})} catch(error){
+  res.send({message : 'User successfully updated!'})} 
+  catch(error){
     res.status(500).send({message: error.message})
   }
 }
