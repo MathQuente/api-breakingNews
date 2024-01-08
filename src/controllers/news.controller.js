@@ -1,5 +1,5 @@
 import {
-  createNewsService,
+  createService,
   findAllService,
   countNews,
   topNewsService,

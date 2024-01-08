@@ -1,5 +1,4 @@
-import { userService, createService, findAllService } from "../services/user.service"
-
+import userService from "../services/user.service.js"
 
 export const create = async (req, res) => {
   try{const { name, userName, email, password, avatar, background } = req.body
@@ -8,7 +7,7 @@ export const create = async (req, res) => {
     res.status(400).send({ message: 'submit all fields for registration' })
   }
 
-  const user = await userService.createService(req.body)
+  const user = await createService(req.body)
 
   if (!user) {
     return res.status(400).send({ message: 'error creating user' })
